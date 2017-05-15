@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+{%  load static %}
+<html>
+<head>
+    <title>Sprint Polls</title>
+    <script
+            src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}" />
+</head>
+
+<body>
+
+    <div class="login-page">
+        <div class="form">
+            <form class="register-form" method="post" a>
+                <input type="text" placeholder="name"/>
+                <input type="password" placeholder="password"/>
+                <input type="text" placeholder="email address"/>
+                <button>create</button>
+                <p class="message">Already registered? <a href="#">Sign In</a></p>
+            </form>
+            <form class="login-form" method="post">
+                {% csrf_token %}
+                <input type="text" placeholder="username" name="username"/>
+                <input type="password" placeholder="password" name="password"/>
+                <button>login</button>
+                <p class="message">Not registered? <a href="#">Create an account</a></p>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        $('.message a').click(function(){
+{#            $('form').animate({height: "toggle", opacity: "toggle"}, "slow");#}
+        });
+    </script>
+
+</body>
+
+</html>
