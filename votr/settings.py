@@ -136,5 +136,5 @@ WEBPACK_LOADER = {
         'STATS_FILE': os.path.join(BASE_DIR, 'webpack-stats.json'),
     }
 }
-ALLOWED_HOSTS = ['sprintPolling.herokuapp.com', 'localhost', '192.168.30.234']
+ALLOWED_HOSTS = ['sprintPolling.herokuapp.com', 'localhost', '192.168.30.234', 'mysterious-refuge-75797.herokuapp.com']
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
